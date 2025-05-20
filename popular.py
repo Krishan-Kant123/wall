@@ -19,6 +19,7 @@ def popular(pgno:int=1):
         soup = BeautifulSoup(response.content, "html.parser")
 
     image_tags = soup.select(".page-gallery-list__item img")
+    # print(image_tags)
     list=[]
     for img in image_tags:
         img_src = (img.get("src") or img.get("data-src"))
